@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --bg-first:  #57215c;
+    --bg-second: #95369e;
+    --bg-third: #dcacd9;
+    --bg-fourth: #19142b;   
+    --bg-fifth: #D0D6D6;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+a.navfont, button.navfont{
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.bg-themelight{
+    background-color: var(--bg-third);
+}
+
+/*** About ***/
+.about-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-about-img.png) top left no-repeat;
+    background-size: contain;
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    padding: 45px 30px;
+    background: #FFFFFF;
+    transition: .5s;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.7), 0 0 30px rgba(173, 216, 230, 0.5), 0 0 45px rgba(173, 216, 230, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    background: var(--bg-second);
+    box-shadow: 0 0 25px rgba(173, 216, 230, 1), 0 0 50px rgba(173, 216, 230, 0.7), 0 0 75px rgba(173, 216, 230, 0.5);
+}
+
+.service-item .service-icon {
+    margin: 0 auto 20px auto;
+    width: 90px;
+    height: 90px;
+    color: var(---bg-second);
+    background: var(--light);
+    transition: .5s;
+}
+.service-item:hover .service-icon {
+    background: var(--light);
+}
+
+
+
+.service-item h5,
+.service-item p {
+    transition: .5s;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: #FFFFFF;
+}
+
+.service-item a.btn {
+    position: relative;
+    display: flex;
+    color: var(--primary);
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item:hover a.btn {
+    color: var(--primary);
+}
+
+.service-item a.btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: var(--light);
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item:hover a.btn::before {
+    width: 100%;
+    background: var(--light);
+}
+img.thisImgServices {
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.7), 0 0 30px rgba(173, 216, 230, 0.5), 0 0 45px rgba(173, 216, 230, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Overwrite the default color of the bootstrap */
+.btn-primary {
+    background-color: var(--bg-first) !important;
+    border-color: var(--border-color) !important; /* Example border color */
+    /* Additional styles as needed */
+}
+
+/* Button Start */
+button.btn-start{
+    background-color: var(--bg-first) !important;
+    color: var(--bg-fifth);
+    border-style: none !important;
+}
+button.btn-start:hover{
+    background-color: var(--bg-fourth) !important;
+    color: var(--bg-third);
+}
+/* Button Pause */
+button.btn-pause{
+    background-color: var(--bg-second) !important;
+    color: var(--bg-fifth);
+    border-style: none !important;
+}
+button.btn-pause:hover{
+    background-color: var(--bg-third) !important;
+    color: var(--bg-fourth);
+    border-style: none !important;
+}
+
+
+
+
+
+
+.bg-primary {
+    background-color: var(--bg-first) !important;
+    border-color: var(--border-color) !important; /* Example border color */
+    /* Additional styles as needed */
+}
+
+
+
+.text-primary{
+    color: var(--bg-second) !important;
+}
+.nav-link{
+    color:var(--bg-first) !important;
+    margin:5px !important;
+    border-radius: 3px;
+}
+
+.nav-link:hover{
+    color:var(--bg-fifth) !important;
+    background-color: var(--bg-second) !important;
+    border-radius: 3px;
+    
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    transition: all 0.3s;
+
+    padding-top: 40px; /* height of top navbar */
+}
+.collapsed .side-nav {
+    margin-left: -250px;
+}
+.collapsed .content {
+    margin-left: 0;
+}
+.footer{
+    z-index: 1;
+    background-color: var(--bg-fourth);
+    color: var(--bg-second);
+    padding: 5px;
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+    background: url(../img/bg-hero.png) center center no-repeat;
+    background-size: cover;
+}
+
+.hero-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Video Display ***/
+.input_video3 {
+    max-width: 100%; /* Ensure the video does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a border around the video */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+  
+.local_video {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.output3 {
+    max-width: 100%; /* Ensures the canvas doesn't exceed the card width */
+    height: auto; /* Maintains aspect ratio */
+    border: 1px solid #ccc; /* Optional: Adds a border around the canvas */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.panel-block {
+    display: flex; /* Ensures the panel-block is flexible */
+    justify-content: center; /* Centers the canvas horizontally */
+    align-items: center; /* Centers the canvas vertically */
+    padding: 10px; /* Optional: Adds some padding around the canvas */
+}
+
+
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        padding-top: 40px;
+    }
+    .collapsed .side-nav {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+
